@@ -1,0 +1,946 @@
+
+/* COLOR VARIABLES
+   I kept the colors from my Figma palette */
+:root {
+  --bs-primary: #FF9BAE;
+  --bs-secondary: #f2d45c;
+  --bs-body-bg: #FFF8EA;
+  --bs-body-color: #222222;
+
+  --site-pink: #FF9BAE;
+  --site-light-pink: #f5b7c5;
+  --site-yellow: #f2d45c;
+  --site-blue: #b9d8f2;
+  --site-cream: #FFF8EA;
+  --site-white: #ffffff;
+  --site-text: #222222;
+  --site-border: #d8cdbd;
+}
+
+/* Global style */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--site-cream);
+  color: var(--site-text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Main inner width for all pages */
+.container {
+  max-width: 1278px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Tablet container width */
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 738px;
+  }
+}
+
+/* Mobile container width */
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 406px;
+  }
+}
+
+/* Skip link for accessibility */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 9999;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Navigation */
+
+header,
+.navbar {
+  min-height: 90px;
+}
+
+/* Main logo size */
+.logo-img {
+  width: 75px;
+  height: auto;
+}
+
+/* Nav links */
+.nav-link {
+  color: var(--site-text);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Active and hover state for nav links */
+.nav-link.active,
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--site-pink);
+}
+
+/* Keep active nav link pink */
+.navbar .nav-link.active {
+  color: #ff9bae;
+}
+
+/* General nav icon style */
+.nav-icon {
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Cart icon color */
+.cart-icon {
+  color: var(--site-pink);
+}
+
+/* Align nav icons nicely */
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Custom icon image size in nav */
+.nav-icon-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Shared buttons */
+
+.hero-btn {
+  background-color: var(--site-pink);
+  border: none;
+  color: #111;
+  border-radius: 999px;
+  width: 350px;
+  height: 70px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+/* Hover and focus state for hero button */
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #eb7c98;
+  color: #111;
+  text-decoration: none;
+}
+
+/* Add to cart button */
+.cart-btn {
+  background-color: #8ec5ef;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Hover and focus state for cart button */
+.cart-btn:hover,
+.cart-btn:focus {
+  background-color: #78b8e7;
+  color: #111;
+}
+
+/* Load more button */
+.load-more-btn {
+  background-color: var(--site-white);
+  border: 1px solid #87bfe9;
+  color: var(--site-text);
+  border-radius: 999px;
+  padding: 0.45rem 1.4rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+
+/* Hover and focus state for load more button */
+.load-more-btn:hover,
+.load-more-btn:focus {
+  background-color: var(--site-blue);
+  color: var(--site-text);
+}
+
+
+/* Home page */
+
+.hero-section {
+  position: relative;
+}
+
+/* Hero image */
+.hero-img {
+  width: 100%;
+  min-height: 230px;
+  object-fit: cover;
+}
+
+/* Overlay content on top of hero image */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main hero heading */
+.hero-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Hero paragraph text */
+.hero-text {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Center category and product cards */
+.category-card,
+.product-card {
+  text-align: center;
+}
+
+/* Category images */
+.category-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.94rem;
+}
+
+/* Category label under image */
+.category-label {
+  margin-top: 0.8rem;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  border: 3px solid var(--site-border)
+}
+
+.label-pink {
+  background-color: var(--site-light-pink);
+}
+
+.label-yellow {
+  background-color: var(--site-yellow);
+}
+
+.label-blue {
+  background-color: var(--site-blue);
+}
+
+/* Product image */
+.product-img {
+  width: 100%;
+  aspect-ratio: 1 / 1.1;
+  object-fit: cover;
+  border-radius: 0.94rem;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+
+.site-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e3d3c4;
+}
+
+/* Footer logo size */
+.footer-logo {
+  width: 170px;
+  margin-inline: auto;
+}
+
+/* Footer slogan text */
+.footer-tagline {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Footer column alignment */
+.footer-col {
+  text-align: left;
+}
+
+/* Footer heading */
+.footer-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Footer heading icon */
+.footer-title-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Space between footer list items */
+.footer-list li {
+  margin-bottom: 0.85rem;
+}
+
+.footer-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+/* Hover and focus state for footer links */
+.footer-list a:hover,
+.footer-list a:focus {
+  color: #ff9bae;
+}
+
+.footer-item-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Middle divider column in desktop footer */
+.footer-divider-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.footer-col {
+  padding-left: 0.75rem;
+}
+
+.footer-right {
+  padding-left: 0.5rem;
+}
+
+.footer-divider-line {
+  width: 1px;
+  height: 180px;
+  background-color: #e3d3c4;
+}
+
+.footer-inner-line {
+  border-top: 1px solid #e3d3c4;
+  margin: 1.25rem 0;
+}
+
+.footer-line {
+  border-top: 1px solid #e3d3c4;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  
+}
+
+/* Copyright text */
+.copyright-text {
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Shop page intro and search */
+
+.shop-page-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.shop-page-text {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+/* Search bar wrapper */
+.search-wrap {
+  max-width: 846px;
+  margin-inline: auto;
+}
+
+/* Search bar style */
+.shop-search {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid var(--site-border);
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+}
+
+/* Search input field */
+.shop-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--site-text);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.shop-search-input::placeholder {
+  color: #a9a7a7;
+}
+
+.search-icon-left,
+.search-icon-right {
+  font-size: 1rem;
+  line-height: 1;
+  color: #7a7a7a;
+}
+
+.product-img {
+  border-radius: 0.75rem;
+}
+
+/* Category pills for shop page */
+
+.category-pill {
+  width: 100%;
+  border: 1px solid var(--site-border);
+  border-radius: 0.45rem;
+  padding: 0.9rem 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--site-text);
+  text-align: center;
+  background-image: none;
+  box-shadow: none;
+}
+
+.category-pill-pink {
+  background-color: #ffb7c5;
+}
+
+.category-pill-yellow {
+  background-color: #f3d76d;
+}
+
+.category-pill-blue {
+  background-color: #b7d7ef;
+}
+
+.shop-pill-wrap {
+  max-width: 1300px;
+  margin-inline: auto;
+}
+.shop-page .row.g-4 {
+  --bs-gutter-y: 2rem;
+}
+
+/* About page */
+
+.about-main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem 0;
+}
+
+.about-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 2rem 0;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 0;
+}
+
+/* Intro paragraph width */
+.about-intro-text {
+  max-width: 540px;
+  margin-bottom: 0;
+}
+
+/* Intro button wrapper */
+.about-btn-wrap {
+  margin-top: 2.5rem;
+  text-align: center;
+  max-width: 540px;
+}
+
+/* Shared about page images */
+.about-img {
+  width: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  display: block;
+}
+
+.about-hero-img {
+  width: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 8.2;
+  display: block;
+  margin-top: 0;
+}
+
+/* Hero image on about page */
+.about-story-img {
+  width: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+.about-story-text {
+  padding-top: 0.5rem;
+}
+
+.about-story-text p:first-of-type {
+  margin-top: 0;
+}
+
+.about-card {
+  border-radius: 0.75rem;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  height: 100%;
+  border: 1px solid var(--site-border);
+}
+
+.about-card-pink {
+  background-color: #f7b8c8;
+}
+
+.about-card-blue {
+  background-color: #b7d7ef;
+}
+
+.about-card-yellow {
+  background-color: #F8D55B;
+}
+
+.about-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-card-small-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.about-cta-box {
+  background-color: #F9E8AA;
+  border: 1px solid var(--site-border);
+  border-radius: 0.75rem;
+  padding: 2rem 1rem;
+}
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+   /* Tablet container width */
+  .container {
+    max-width: 738px;
+  }
+
+  /* Tablet header height */
+  header,
+  .navbar {
+    min-height: 60px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  /* Smaller nav icons for tablet */
+  .nav-icon-img {
+    width: 24px;
+    height: 24px;
+  }
+
+   /* Tablet home page text sizes */
+  .hero-title {
+  font-size: 32px;
+  }
+
+  .section-title {
+  font-size: 24px;
+  }
+
+  .category-label {
+  font-size: 18px;
+  }
+
+  .product-title,
+  .product-price,
+  .cart-btn {
+  font-size: 16px;
+  }
+
+  /* Tablet footer spacing */
+  .footer-right {
+    padding-left: 1.5rem;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-title-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer-item-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+  }
+
+   /* Tablet shop page text sizes */
+  .shop-page-title {
+    font-size: 1.8rem;
+  }
+
+  .shop-page-text {
+    font-size: 0.9rem;
+  }
+
+  .shop-search {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .shop-search-input {
+    font-size: 0.85rem;
+  }
+
+  .category-pill {
+    font-size: 0.9rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .load-more-btn {
+    font-size: 0.8rem;
+    padding: 0.35rem 1rem;
+  }
+
+  /* Tablet about page text sizes */
+  .about-main-title {
+    font-size: 1.35rem;
+  }
+
+  .about-section-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .about-hero-img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-story-img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .about-card-title,
+  .about-card-small-title {
+    font-size: 0.95rem;
+  }
+
+  .about-card-text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .about-cta-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-btn {
+    width: 170px;
+    height: 48px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+  /* Main mobile container width */
+  .container {
+    max-width: 406px;
+  }
+
+  /* Header height for mobile */
+  header,
+  .navbar {
+    min-height: 40px;
+  }
+
+  /* Smaller logo for mobile */
+  .logo-img {
+    width: 42px;
+  }
+
+  /* Hide about page button on mobile */
+  .about-btn-wrap {
+    display: none;
+  }
+
+  /* Smaller nav icons for mobile */
+  .nav-icon-img {
+    width: 22px;
+    height: 22px;
+  }
+  .category-img {
+  aspect-ratio: 16 / 9;
+  }
+
+  .product-img {
+  aspect-ratio: 16 / 9;
+  }
+
+  /* Footer layout for mobile */
+  .footer-right {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .footer-title {
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .footer-list a {
+    justify-content: center;
+  }
+
+  .footer-inner-line {
+    max-width: 260px;
+    margin: 1.25rem auto;
+  }
+
+  .footer-tagline {
+    text-align: center;
+  }
+
+  /* Shared mobile heading and text sizes */
+  
+  .hero-title,
+  .shop-page-title,
+  .about-main-title {
+    font-size: 24px;
+  }
+
+  .section-title,
+  .about-section-title {
+    font-size: 20px;
+  }
+
+  .hero-text,
+  .shop-page-text,
+  .about-text {
+    font-size: 12px;
+  }
+  .product-title {
+  font-size: 14px;
+  }
+
+  .product-price {
+  font-size: 14px;
+  }
+
+  /* Shop page search and category pills */
+  .shop-search {
+    padding: 0.7rem;
+  }
+
+  .shop-search-input {
+    font-size: 0.8rem;
+  }
+
+  .category-label,
+  .category-pill {
+  font-size: 0.78rem;
+  padding: 0.35rem 0.5rem;
+  border: 3px solid var(--site-border);
+  }
+
+  /* Hide extra products on mobile */
+  .mobile-hide {
+    display: none;
+  }
+
+  /* Shop page mobile product spacing */
+  .shop-page .row.g-4 {
+    --bs-gutter-y: 0.3rem;
+  }
+  .shop-page .col-12 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  }
+
+  .shop-page .product-card {
+    margin-bottom: 1rem;
+  }
+
+  .shop-page .product-img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .shop-page .product-title {
+    margin-top: 0.4rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .shop-page .product-price {
+    margin-bottom: 0.35rem;
+  }
+
+  .shop-page .cart-btn {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
+  .load-more-btn {
+    font-size: 0.78rem;
+    padding: 0.35rem 1rem;
+  }
+
+  /* About page images */
+  .about-hero-img,
+  .about-story-img {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* About page button size if shown */
+  .about-btn-wrap {
+    margin-top: 1rem;
+    text-align: center;
+    max-width: none;
+  }
+
+  .hero-btn {
+    width: 120px;
+    height: 34px;
+    font-size: 0.72rem;
+  }
+
+  /* About cards */
+  .about-card {
+    padding: 0.9rem 0.75rem;
+  }
+
+  .about-card-title,
+  .about-card-small-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-card-text {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+  
+  /* About call to action box */
+  .about-cta-box {
+    padding: 1rem 0.75rem;
+  }
+
+  .about-cta-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .about-cta-text {
+    font-size: 0.72rem;
+    margin-bottom: 0.7rem;
+  }
+}
